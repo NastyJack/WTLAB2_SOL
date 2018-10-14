@@ -1,0 +1,27 @@
+<html>
+<form  action="s07.php" method="post">
+
+<body>
+    
+    <br><label>Name</label><input type="text" name="n"/>
+    <br><label>Item Type</label>
+    <select name="it">
+    <option value="None">Select</option>
+    <option value="Art">Art</option>
+    <option value="Director">Director</option>
+    <option value="Movie">Movie</option>
+    </select>
+    <br><label>Movie Type</label>
+    <input type="checkbox" name="mt[]" value="Horror"/>Horror
+    <input type="checkbox" name="mt[]" value="drama"/>drama
+    <input type="checkbox" name="mt[]" value="sci-fi"/>sci-fi
+    <input type="checkbox" name="mt[]" value="fiction"/>fiction
+    <input type="checkbox" name="mt[]" value="thriller"/>thriller
+    
+    <br><label>Description</label><br><textarea rows="5" cols="40" name="d"> </textarea>
+   
+
+    <br><button type="submit" name="sub">Submit</button>
+</body>
+</form>
+</html>

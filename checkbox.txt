@@ -1,0 +1,10 @@
+/*
+// showing checkbox values. not required in question.
+if(isset($_POST["sub"])) //Checks if the submit button is pressed
+{
+    if(isset($_POST["mt"])) //checks if any interest is checked
+    {
+        foreach($_POST["mt"] as $value) //Iterate the interest array and get the values
+        {
+            echo  " ".$value;  //print the values
+        }}}  */

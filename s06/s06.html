@@ -1,0 +1,44 @@
+<html>
+<form  action="i.php"  onsubmit="return check();" method="post"> 
+
+<body>
+    
+    <br><label>Username</label><input id="u" name="u"/>
+    <br><label>Password</label><input id="p" name="p"/>
+   
+
+   
+    <br><button  formaction="ct.php">Create Table</button>
+    <br><button type="submit">Submit</button>
+    
+</body>
+</form>
+</html>
+
+<script type="text/javascript">
+//Create table won't work unless correct values have been entered. 
+//However it won't insert those very values either.
+function check()
+    {   var f=0; //flag to allow or disallow form submission in form tag.
+        var u=document.getElementById('u').value;
+        var p=document.getElementById('p').value;
+        var patu=(/(?=.*[A-Z]){8,}/); //positive look ahead condition.
+         var patp=(/(?=.*[!@#$%^&*()_+]){6,}/); 
+         // special chars on num keys -> !@#$%^&*()_+
+        if(u.match(patu))  //nested if to mantain flow of string validation.
+            { //alert("Username GOOD!");  f=1;
+            
+             if(p.match(patp))
+           { //alert("Password GOOD!");  f=1;} 
+             else {alert("Password must be at least 6 characters and have a special character!"); f=0; }
+            
+            }
+        else {alert(" Username must be at least 8 characters and have a capital letter!"); f=0;}
+        
+        if(f==1) return true
+         else return false;
+    
+    
+    }
+    
+</script>
